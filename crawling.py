@@ -12,5 +12,5 @@ for i in img:
         if link.startswith("http"):
             get = requests.get(link)
             if get.status_code == 200:
-                with open(f"img/{name}", 'wb') as w:
+                with open(fr"img/'{name}'", 'wb') as w:
                     w.write(get.content)
